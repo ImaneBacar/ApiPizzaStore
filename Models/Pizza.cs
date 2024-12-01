@@ -1,10 +1,13 @@
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 namespace PizzaStore.Models
 {
-public class PizzaEhod
+public class Pizza
 {
-public int IdEhod { get; set; }
-public string? NomEhod { get; set; }
-public string? DescriptionEhod { get; set; }
+
+        [Key]
+        public int IdEhod { get; set; }
+        public string? NomEhod { get; set; }
+        public string? DescriptionEhod { get; set; }
 }
 }

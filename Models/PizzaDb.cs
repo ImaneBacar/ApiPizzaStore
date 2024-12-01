@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+
 namespace PizzaStore.Models
 {
-class PizzaDb : DbContext
-{
-public PizzaDb(DbContextOptions options) : base(options) { }
-public DbSet<PizzaEhod> Pizzas { get; set; } = null!;
-}
-    
+    public class PizzaDb : DbContext
+    {
+        public PizzaDb(DbContextOptions<PizzaDb> options) : base(options) { }
+
+        public DbSet<Pizza> Pizzas { get; set; } = null!;
+    }
 }
